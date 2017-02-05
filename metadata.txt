@@ -21,7 +21,7 @@ changelog=
    - First version.
 
 ; tags are in comma separated value format, spaces are allowed
-tags=layer,layers,groups,vector,raster,layer tree,toc,legend,copy,paste,clipboard,project,properties,style
+tags=layer,layers,groups,vector,raster,layer tree,toc,legend,copy,paste,clipboard,project,properties,style,layer definition,qlr
 
 homepage=https://github.com/gacarrillor/CopyLayersAndGroupsToClipboard
 tracker=https://github.com/gacarrillor/CopyLayersAndGroupsToClipboard/issues
