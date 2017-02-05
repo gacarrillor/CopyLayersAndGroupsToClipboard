@@ -22,9 +22,11 @@
 import os
 import time
 import tempfile
+import codecs
 
 from qgis.core import ( QgsLayerDefinition, QgsProject )
 from PyQt4.QtGui import QApplication, QIcon, QAction
+from PyQt4.QtXml import QDomDocument
 
 import resources_rc
 
@@ -69,9 +71,15 @@ class CopyLayersAndGroupsToClipboard:
             self.iface.messageBar().pushMessage( "Copy layers and groups", "First select at least 1 layer or group in the Layers Panel.", 0, 10 )
             return
 
+        doc = QDomDocument( "QGIS-layers-and-groups" )
+        QgsLayerDefinition.exportLayerDefinition( doc, selectedNodes, "", "" )
+
         tempDir = tempfile.gettempdir()
         xmlFilePath = os.path.join( tempDir, str(time.time()).replace(".","")+".qlr" )
-        QgsLayerDefinition.exportLayerDefinition( xmlFilePath, selectedNodes )
+        f = codecs.open( xmlFilePath, 'w', encoding='utf-8' )
+        f.write( doc.toString() )
+        f.close()
+
         self.clipboard.setText( "@QGIS-layers-and-groups@{}".format( xmlFilePath ) )
         self.iface.messageBar().pushMessage( "Copy layers and groups", "Selected layers and/or groups were copied to clipboard.", 0, 5 )
 
