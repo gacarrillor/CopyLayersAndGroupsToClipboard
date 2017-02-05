@@ -1,0 +1,35 @@
+; the next section is mandatory
+[general]
+name=Copy layers and groups to clipboard
+description=Copy selected layers and groups from Layers Panel to clipboard.
+about=Copy selected layers and groups from Layers Panel to clipboard, so that they can be pasted into other QGIS instances.
+version=1.0
+qgisMinimumVersion=2.0
+
+; not used yet, will allow to put a plugin in the right menu
+category=Plugins
+
+author=Germán Carrillo (GeoTux)
+email=gcarrillo@linuxmail.org
+
+; end of mandatory metadata
+
+; start of optional metadata
+
+changelog=
+  [1.0] (20170205)
+   - First version.
+
+; tags are in comma separated value format, spaces are allowed
+tags=layer,layers,groups,vector,raster,layer tree,toc,legend,copy,paste,clipboard,project,properties,style
+
+homepage=https://github.com/gacarrillor/CopyLayersAndGroupsToClipboard
+tracker=https://github.com/gacarrillor/CopyLayersAndGroupsToClipboard/issues
+repository=https://github.com/gacarrillor/CopyLayersAndGroupsToClipboard
+
+
+; path to a icon within the plugin folder
+icon=paste.png
+
+experimental=True
+deprecated=False

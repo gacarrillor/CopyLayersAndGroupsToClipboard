@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/plugins/CopyLayersAndGroupsToClipboard">
+    <file>paste.png</file>
+    <file>copy.png</file>
+  </qresource>
+</RCC>
