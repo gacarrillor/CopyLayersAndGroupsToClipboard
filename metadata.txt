@@ -31,5 +31,5 @@ repository=https://github.com/gacarrillor/CopyLayersAndGroupsToClipboard
 ; path to a icon within the plugin folder
 icon=paste.png
 
-experimental=True
+experimental=False
 deprecated=False

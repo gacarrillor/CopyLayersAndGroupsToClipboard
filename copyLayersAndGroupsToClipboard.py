@@ -68,7 +68,7 @@ class CopyLayersAndGroupsToClipboard:
         # Iterate
         selectedNodes = self.iface.layerTreeView().selectedNodes( True )
         if len( selectedNodes) == 0:
-            self.iface.messageBar().pushMessage( "Copy layers and groups", "First select at least 1 layer or group in the Layers Panel.", 0, 10 )
+            self.iface.messageBar().pushMessage( "Copy layers and groups", "First select at least 1 layer or group in the Layers Panel.", 0, 7 )
             return
 
         doc = QDomDocument( "QGIS-layers-and-groups" )
@@ -106,4 +106,4 @@ class CopyLayersAndGroupsToClipboard:
 
 
     def showNoDataMessage( self ):
-        self.iface.messageBar().pushMessage( "Copy layers and groups", "The clipboard doesn't contain valid QGIS layers and/or groups to paste.", 0, 10 )
+        self.iface.messageBar().pushMessage( "Copy layers and groups", "The clipboard doesn't contain valid QGIS layers and/or groups to paste.", 1, 7 )
